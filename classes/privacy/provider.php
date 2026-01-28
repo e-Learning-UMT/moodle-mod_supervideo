@@ -167,6 +167,7 @@ class provider implements
                 'is_system_generated' => transform::yesno($record->issystem),
             ];
             return $carry;
+
         }, function ($cmid, $data) use ($user, $cmidstocmids) {
             $context = context_module::instance($cmidstocmids[$cmid]);
             $contextdata = helper::get_context_data($context, $user);
